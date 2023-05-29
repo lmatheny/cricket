@@ -1521,7 +1521,7 @@ export default function Game() {
             </div>
 
           </Dialog>
-          <Grid container spacing={1}>
+          <Grid container spacing={2}>
             <Grid item xs={4}>
               <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.25 }}><h1 class="pointsText" style={{ fontSize: ((windowHeight  / 20) + 'px') }} >Points</h1><h2 class="pointsNumber" style={{ fontSize: ((windowHeight / 20) + 'px') }}>{pointsTeamOne} </h2></Box>
             </Grid>
@@ -1559,38 +1559,38 @@ export default function Game() {
                 </Box></Box>
             </Grid>
             <Grid item xs={4}>
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 25) + 'px') }}></img><div class="container">
+              <Box sx={{  height: (windowHeight / 10) * 6.5}} > <Box sx={{ height: (windowHeight / 10) * .85 }}> <img  class="barImageWeb" src={bar} style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 30) + 'px')}}></img><div class="container">
                 <img src={imageOne20} class="scoreLogo" onClick={changeImageTeamOne20} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }} ></img>
                 <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >20</p>
                 <img src={imageTwo20} class="scoreLogo" onClick={changeImageTeamTwo20} style={{ marginTop: '2%', marginBottom: '2%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
               </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
                   <div class="container">
                     <img src={imageOne19} class="scoreLogo" onClick={changeImageTeamOne19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                     <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >19</p>
                     <img src={imageTwo19} class="scoreLogo" onClick={changeImageTeamTwo19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne18} class="scoreLogo" onClick={changeImageTeamOne18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >18</p>
                   <img src={imageTwo18} class="scoreLogo" onClick={changeImageTeamTwo18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne17} class="scoreLogo" onClick={changeImageTeamOne17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >17</p>
                   <img src={imageTwo17} class="scoreLogo" onClick={changeImageTeamTwo17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne16} class="scoreLogo" onClick={changeImageTeamOne16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >16</p>
                   <img src={imageTwo16} class="scoreLogo" onClick={changeImageTeamTwo16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne15} class="scoreLogo" onClick={changeImageTeamOne15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >15</p>
                   <img src={imageTwo15} class="scoreLogo" onClick={changeImageTeamTwo15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <img src={bull} class="bullLogo" style={{ height: ((windowHeight / 10 * 1) + 'px') }}></img>
                   <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
@@ -1598,7 +1598,7 @@ export default function Game() {
               </Box>
             </Grid>
             <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
+              <Box sx={{ height: (windowHeight / 10) * 6.5}}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
                 <Grid item xs={6}>
                   <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} ><img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={playerThreePic} class="guy" ></img> <img  style={{ marginTop: ((windowHeight / 1500) + '%') }} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img></Box>
                 </Grid>
@@ -1682,7 +1682,7 @@ export default function Game() {
             </div>
 
           </Dialog>
-          <Grid container spacing={1}>
+          <Grid container spacing={2}>
             <Grid item xs={4}>
               <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.25 }}><h1 class="pointsText" style={{ fontSize: ((windowHeight  / 20) + 'px') }} >Points</h1><h2 class="pointsNumber" style={{ fontSize: ((windowHeight / 20) + 'px') }}>{pointsTeamOne} </h2></Box>
             </Grid>
@@ -1720,38 +1720,38 @@ export default function Game() {
                 </Box></Box>
             </Grid>
             <Grid item xs={4}>
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 25) + 'px') }}></img><div class="container">
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 25) + 'px') }}></img><div class="container">
                 <img src={imageOne20} class="scoreLogo" onClick={changeImageTeamOne20} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }} ></img>
                 <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >20</p>
                 <img src={imageTwo20} class="scoreLogo" onClick={changeImageTeamTwo20} style={{ marginTop: '2%', marginBottom: '2%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
               </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
                   <div class="container">
                     <img src={imageOne19} class="scoreLogo" onClick={changeImageTeamOne19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                     <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >19</p>
                     <img src={imageTwo19} class="scoreLogo" onClick={changeImageTeamTwo19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne18} class="scoreLogo" onClick={changeImageTeamOne18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >18</p>
                   <img src={imageTwo18} class="scoreLogo" onClick={changeImageTeamTwo18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne17} class="scoreLogo" onClick={changeImageTeamOne17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >17</p>
                   <img src={imageTwo17} class="scoreLogo" onClick={changeImageTeamTwo17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne16} class="scoreLogo" onClick={changeImageTeamOne16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >16</p>
                   <img src={imageTwo16} class="scoreLogo" onClick={changeImageTeamTwo16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne15} class="scoreLogo" onClick={changeImageTeamOne15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
                   <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >15</p>
                   <img src={imageTwo15} class="scoreLogo" onClick={changeImageTeamTwo15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
                   <img src={bull} class="bullLogo" style={{ height: ((windowHeight / 10 * 1) + 'px') }}></img>
                   <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>

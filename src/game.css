@@ -1,10 +1,12 @@
 body {
     background-color: black;
+    align-items: center;
+   
     
 }
 
 .gameWeb {
-    width: 98.5%;
+    width: 97%;
     height: 100%;
     margin-left: 1%;
     margin-right: 1%;
@@ -186,29 +188,39 @@ body {
   margin-top:50% 
   
 }
-.barImage {
+.barImageWeb {
 
-  width:99.35%;
-  min-width: 99.5%;
-  max-width: 101.5%;
-  margin-left: 1.2%;
- 
-  
-  
-  
-  
-  
- 
-}
 
-.barImage2 {
+  max-width: 102.5%;
   width: 100%;
+  min-width: 100%;
+  margin-left: 1.1%;
+  /* margin-left:.5rem;
+  margin-right:.6rem; */
+  
+ 
+  
+}
+
+.barImageMobile {
+  width: 102.5%;
   max-height: 30px;
+ 
+  
+  min-width: 100%;
+  margin-left: 3.5%;
+  /* margin-left:.5rem;
+  margin-right:.6rem; */
   
 
  
 }
 
+.bc {
+  width: 100%;
+ 
+  justify-content: center;
+}
 
 
 .pointsNumber {
