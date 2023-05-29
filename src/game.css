@@ -1,9 +1,25 @@
 body {
     background-color: black;
-    width: 99%;
-    height: 100%;
-  
+    
 }
+
+.gameWeb {
+    width: 98.5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.gameMobile {
+  width: 96%;
+  height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+
+
 
 .one {
   background-color: aquamarine;

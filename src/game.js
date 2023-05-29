@@ -1494,10 +1494,11 @@ export default function Game() {
   };
 
 
+  if(!isMobile) {
 
     return (
 
-      <div className="App">
+      <div className="gameWeb">
 
 
         <Box>
@@ -1655,4 +1656,167 @@ export default function Game() {
 
       </div>
     )
+  } else {
+    return (
+
+      <div className="gameMobile">
+
+
+        <Box>
+          <Dialog
+            open={open}>
+            <DialogTitle class="alertText">Game Over
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText class="alertBody">
+                Team {winner} has won the Game!
+              </DialogContentText>
+            </DialogContent>
+            <div class="containerAlert">
+              <Button variant="outlined" onClick={handleClose}>
+                CLOSE
+              </Button>
+              <Button variant="outlined" onClick={refreshView}>
+                RESTART
+              </Button>
+            </div>
+
+          </Dialog>
+          <Grid container spacing={1}>
+            <Grid item xs={4}>
+              <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.25 }}><h1 class="pointsText" style={{ fontSize: ((windowHeight  / 20) + 'px') }} >Points</h1><h2 class="pointsNumber" style={{ fontSize: ((windowHeight / 20) + 'px') }}>{pointsTeamOne} </h2></Box>
+            </Grid>
+            <Grid item xs={4} spacing={5}>
+              <Box sx={{ height: (windowHeight / 10) * 1.25 }}> <h1 class="vsText" style={{ fontSize: ((windowHeight / 12) + 'px') }}>VS</h1></Box>
+            </Grid>
+            <Grid item xs={4}  >
+              <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.25 }}><h1 class="pointsText" style={{ fontSize: ((windowHeight / 20) + 'px') }}>Points</h1><h2 class="pointsNumber" style={{ fontSize: ((windowHeight / 20) + 'px') }}>{pointsTeamTwo} </h2></Box>
+            </Grid>
+            <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerOneUp} borderRadius="6%"><Grid container>
+                <Grid item xs={6}>
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} ><img  style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={playerOnePic} class="guy"></img> <img  style={{ marginTop: ((windowHeight / 1500) + '%') }}align='center' src={rotatePic} onClick={changeplayer1Icon} class="rotButton"></img></Box>
+                </Grid>
+                <Grid item xs={6} >
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                    MPR
+                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                      {playerOneMPR}
+                    </p></Box>
+                </Grid>
+              </Grid>
+              </Box> <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerTwoUp} borderRadius="6%"><Grid container>
+                <Grid item xs={6}>
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} ><img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={playerTwoPic} class="guy" ></img> <img style={{ marginTop: ((windowHeight / 1500) + '%') }} align='center' src={rotatePic} onClick={changeplayer2Icon} class="rotButton"></img></Box>
+                </Grid>
+                <Grid item xs={6} >
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                    MPR
+                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                      {playerTwoMPR}
+                    </p></Box>
+                </Grid>
+              </Grid>
+                </Box></Box>
+            </Grid>
+            <Grid item xs={4}>
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 25) + 'px') }}></img><div class="container">
+                <img src={imageOne20} class="scoreLogo" onClick={changeImageTeamOne20} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }} ></img>
+                <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >20</p>
+                <img src={imageTwo20} class="scoreLogo" onClick={changeImageTeamTwo20} style={{ marginTop: '2%', marginBottom: '2%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+              </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
+                  <div class="container">
+                    <img src={imageOne19} class="scoreLogo" onClick={changeImageTeamOne19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                    <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >19</p>
+                    <img src={imageTwo19} class="scoreLogo" onClick={changeImageTeamTwo19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                  </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne18} class="scoreLogo" onClick={changeImageTeamOne18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >18</p>
+                  <img src={imageTwo18} class="scoreLogo" onClick={changeImageTeamTwo18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne17} class="scoreLogo" onClick={changeImageTeamOne17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >17</p>
+                  <img src={imageTwo17} class="scoreLogo" onClick={changeImageTeamTwo17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne16} class="scoreLogo" onClick={changeImageTeamOne16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >16</p>
+                  <img src={imageTwo16} class="scoreLogo" onClick={changeImageTeamTwo16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne15} class="scoreLogo" onClick={changeImageTeamOne15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 600) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >15</p>
+                  <img src={imageTwo15} class="scoreLogo" onClick={changeImageTeamTwo15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                </div></Box>
+                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImage" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'),  maxWidth: ((windowWidth / 20  + 'px')) }}></img>
+                  <img src={bull} class="bullLogo" style={{ height: ((windowHeight / 10 * 1) + 'px') }}></img>
+                  <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px') ,  maxWidth: ((windowWidth / 20  + 'px'))}}></img>
+                </div></Box>
+              </Box>
+            </Grid>
+            <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
+                <Grid item xs={6}>
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} ><img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={playerThreePic} class="guy" ></img> <img  style={{ marginTop: ((windowHeight / 1500) + '%') }} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img></Box>
+                </Grid>
+                <Grid item xs={6} >
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                    MPR
+                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                      {playerThreeMPR}
+                    </p></Box>
+                </Grid>
+              </Grid>
+              </Box> <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerFourUp} borderRadius="6%"><Grid container>
+                <Grid item xs={6}>
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} ><img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={playerFourPic} class="guy" ></img> <img style={{ marginTop: ((windowHeight / 1500) + '%') }} align='center' src={rotatePic} onClick={changeplayer4Icon} class="rotButton"></img></Box>
+                </Grid>
+                <Grid item xs={6} >
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                    MPR
+                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                      {playerFourMPR}
+                    </p></Box>
+                </Grid>
+              </Grid>
+                </Box></Box>
+            </Grid>
+            <Grid item xs={12}>
+              <Box sx={{ height: (windowHeight / 10) * .5 }}>
+
+                <Grid container spacing={1}>
+                  <Grid item xs={4}>
+                    <Button style={{height: (windowHeight / 25), fontSize:((windowHeight / 70) + 'px')}} variant="contained" color="success" onClick={swapGme}>{totalPlayersTitle}</Button>
+                  </Grid>
+
+
+
+                  <Grid item xs={4}>
+                    <Button  style={{height: (windowHeight / 25), fontSize:((windowHeight / 70) + 'px'), }} variant="contained" color={negativeModeColor} onClick={swapScoreMode}>{negativeModeText}</Button>
+                  </Grid>
+
+
+                  <Grid item xs={4}>
+                    <Button style={{height: (windowHeight / 25), fontSize:((windowHeight / 70) + 'px') }} variant="contained" color="success" onClick={nextPlayerUp} >Next Player</Button>
+                  </Grid>
+                </Grid>
+              </Box>
+
+            </Grid>
+            <Grid item xs={12}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.4 }} >
+              <img align='center' src={blankAd} class="adBanner" ></img></Box></Grid>
+          </Grid>
+
+        </Box>
+
+
+
+      </div>
+    )
+
   }
+}
