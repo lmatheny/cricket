@@ -123,6 +123,13 @@ body {
   border-radius: 15%;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add any other styles you need for the container */
+}
+
 .vsText {
   font-family: 'Fantasy';
   text-transform: capitalize;

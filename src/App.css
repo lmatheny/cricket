@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+imgLive {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+buttonLive {
+  background-color: crimson;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
