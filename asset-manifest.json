@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cricket/static/css/main.c74d7b1c.css",
-    "main.js": "/cricket/static/js/main.31226b46.js",
+    "main.css": "/cricket/static/css/main.75368ee3.css",
+    "main.js": "/cricket/static/js/main.c790800a.js",
     "static/js/787.ac8150d9.chunk.js": "/cricket/static/js/787.ac8150d9.chunk.js",
     "static/media/guy.png": "/cricket/static/media/guy.75770dd8f631e4492396.png",
     "static/media/a7.png": "/cricket/static/media/a7.cef78014236f78eef925.png",
@@ -36,12 +36,12 @@
     "static/media/s1.png": "/cricket/static/media/s1.24457716a4c326a44124.png",
     "static/media/vs.jpeg": "/cricket/static/media/vs.5d0a225abcb7732f4aec.jpeg",
     "index.html": "/cricket/index.html",
-    "main.c74d7b1c.css.map": "/cricket/static/css/main.c74d7b1c.css.map",
-    "main.31226b46.js.map": "/cricket/static/js/main.31226b46.js.map",
+    "main.75368ee3.css.map": "/cricket/static/css/main.75368ee3.css.map",
+    "main.c790800a.js.map": "/cricket/static/js/main.c790800a.js.map",
     "787.ac8150d9.chunk.js.map": "/cricket/static/js/787.ac8150d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c74d7b1c.css",
-    "static/js/main.31226b46.js"
+    "static/css/main.75368ee3.css",
+    "static/js/main.c790800a.js"
   ]
 }
