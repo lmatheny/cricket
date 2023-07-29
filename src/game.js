@@ -85,8 +85,8 @@ export default function Game() {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    width: 300,
-    height: 300,
+    width: { min: 480 },
+    height: { min: 690 },
     facingMode: "user",
   };
 
@@ -107,8 +107,8 @@ export default function Game() {
   const webcamRef2 = useRef(null);
 
   const videoConstraints2 = {
-    width: 200,
-    height: 200,
+    width: { min: 480 },
+    height: { min: 690 },
     facingMode: "user",
   };
 
@@ -128,8 +128,8 @@ export default function Game() {
   const webcamRef3 = useRef(null);
 
   const videoConstraints3 = {
-    width: 200,
-    height: 200,
+    width: { min: 480 },
+    height: { min: 690 },
     facingMode: "user",
   };
 
@@ -152,8 +152,8 @@ export default function Game() {
 
 
   const videoConstraints4 = {
-    width: 200,
-    height: 200,
+    width: { min: 480 },
+    height: { min: 690 },
     facingMode: "user",
   };
 
@@ -1674,11 +1674,12 @@ export default function Game() {
                               audio={false}
                               mirrored={false}
                               facingMode= "user"
-                              height={((windowHeight / 6.25) + 'px')}
-                              width={((windowWidth / 7.5) + 'px')}
+                              videoConstraints={videoConstraints} 
+                              width={((windowWidth / 100) * 15)}
+                              
                               ref={webcamRef}
                               screenshotFormat="image/jpeg"
-                              videoConstraints={videoConstraints}
+                             
                             />
 
                             <Button  variant="contained" color="success" style={{marginBottom: ((windowHeight / 100) * 3) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture}>Take photo</Button>
@@ -1727,8 +1728,9 @@ export default function Game() {
                              audio={false}
                              mirrored={false}
                              facingMode= "user"
-                             height={((windowHeight / 6.25) + 'px')}
-                             width={((windowWidth / 7.5) + 'px')}
+                           
+                              
+                             width={((windowWidth / 100) * 15)}
                              ref={webcamRef2}
                              screenshotFormat="image/jpeg"
                              videoConstraints={videoConstraints2}
@@ -1828,11 +1830,11 @@ export default function Game() {
                              audio={false}
                              mirrored={false}
                              facingMode= "user"
-                             height={((windowHeight / 6.25) + 'px')}
-                             width={((windowWidth / 7.5) + 'px')}
+                            
                              ref={webcamRef3}
                              screenshotFormat="image/jpeg"
-                             videoConstraints={videoConstraints3}
+                             videoConstraints={videoConstraints} 
+                             width={((windowWidth / 100) * 15)}
                            />
 
 
@@ -1886,11 +1888,11 @@ export default function Game() {
                              audio={false}
                              mirrored={false}
                              facingMode= "user"
-                             height={((windowHeight / 6.25) + 'px')}
-                             width={((windowWidth / 7.5) + 'px')}
+                            
                              ref={webcamRef4}
                              screenshotFormat="image/jpeg"
-                             videoConstraints={videoConstraints4}
+                             videoConstraints={videoConstraints} 
+                             width={((windowWidth / 100) * 15)}
                            />
 
 
