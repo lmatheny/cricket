@@ -98,15 +98,15 @@ body {
 
 .bullLogo {
   aspect-ratio: "1:1";
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 810%;
+  max-height: 100%;
 }
 
 .guy {
   
   max-width: 100%;
   min-height: 20%;
-  max-height: 70%;
+  max-height: 100%;
 }
 
 .adBanner {
@@ -116,7 +116,8 @@ body {
 }
 
 .rotButton {
-  max-width: 35%;
+  
+  
   min-height: 15%;
   max-height: 20%;
   background-color: grey;
