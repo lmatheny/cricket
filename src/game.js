@@ -1681,12 +1681,12 @@ export default function Game() {
                               videoConstraints={videoConstraints}
                             />
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture}>Take photo</Button>
+                            <Button  variant="contained" color="success" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={capture}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 12.5) + 'px') }} src={img} alt="screenshot" />
+                            <Button  variant="contained" color="error" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={() => setImg(null)}>Retake</Button>
 
                           </>
                         )}
@@ -1722,12 +1722,12 @@ export default function Game() {
                               videoConstraints={videoConstraints2}
                             />
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture2}>Take photo</Button>
+                            <Button  variant="contained" color="success" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={capture2}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img2} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg2(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 12.5) + 'px') }} src={img2} alt="screenshot" />
+                            <Button   variant="contained" color="error" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={() => setImg2(null)}>Retake</Button>
 
                           </>
                         )}
@@ -1806,12 +1806,12 @@ export default function Game() {
                               videoConstraints={videoConstraints3}
                             />
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture3}>Take photo</Button>
+                            <Button  variant="contained" color="success" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={capture3}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img3} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg3(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 12.5) + 'px') }} src={img3} alt="screenshot" />
+                            <Button  variant="contained" color="error" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={() => setImg3(null)}>Retake</Button>
 
                           </>
                         )}
@@ -1849,12 +1849,12 @@ export default function Game() {
                             />
 
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture4}>Take photo</Button>
+                            <Button variant="contained" color="success" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={capture4}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img4} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 45) + 'px'), width: "100%" }} onClick={() => setImg4(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 12.5) + 'px') }} src={img4} alt="screenshot" />
+                            <Button   variant="contained" color="error" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={() => setImg4(null)}>Retake</Button>
 
 
                           </>
