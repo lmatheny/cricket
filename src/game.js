@@ -1675,7 +1675,7 @@ export default function Game() {
                               mirrored={false}
                               facingMode= "user"
                               height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 6.25) + 'px')}
+                              width={((windowWidth / 2) + 'px')}
                               ref={webcamRef}
                               screenshotFormat="image/jpeg"
                               videoConstraints={videoConstraints}
@@ -1685,7 +1685,7 @@ export default function Game() {
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 20) + 'px') }} src={img} alt="screenshot" />
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 2) + 'px') }} src={img} alt="screenshot" />
                             <Button  variant="contained" color="error" style={{ height: ((windowHeight / 22.5) + 'px'), width: "100%" }} onClick={() => setImg(null)}>Retake</Button>
 
                           </>
@@ -2163,7 +2163,7 @@ export default function Game() {
                               mirrored={false}
                               facingMode= "user"
                               height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 6.25) + 'px')}
+                              width={((windowWidth / 3) + 'px')}
                               ref={webcamRef4}
                               screenshotFormat="image/jpeg"
                               videoConstraints={videoConstraints4}
