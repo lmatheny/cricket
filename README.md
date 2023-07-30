@@ -108,7 +108,7 @@ This project is licensed under the MIT License. For more information, see the [L
 
 **Mobile**
 
-![Mobile Screenshot](assets/mobile.png)
+![Mobile Screenshot](demopcis/phone.png)
 
 ## Contact
 
