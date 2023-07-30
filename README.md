@@ -108,7 +108,10 @@ This project is licensed under the MIT License. For more information, see the [L
 
 **Mobile**
 
-![Mobile Screenshot](demopcis/phone.png =500x1000)
+<p align="center">
+  <img src="demopcis/phone.png" alt="Mobile Screenshot" width="500" height="1000">
+</p>
+
 
 
 
