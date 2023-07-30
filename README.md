@@ -101,7 +101,7 @@ This project is licensed under the MIT License. For more information, see the [L
 **Web**
 
 <p align="left">
-  <img src="demopcis/web.png" alt="Web Screenshot" width="800" height="400">
+  <img src="demopcis/web.png" alt="Web Screenshot" width="800" height="800">
 </p>
 
 
@@ -115,7 +115,7 @@ This project is licensed under the MIT License. For more information, see the [L
 **Mobile**
 
 <p align="left">
-  <img src="demopcis/phone.png" alt="Mobile Screenshot" width="500" height="1000">
+  <img src="demopcis/phone.png" alt="Mobile Screenshot" width="500" height="800">
 </p>
 
 
