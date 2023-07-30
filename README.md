@@ -108,7 +108,8 @@ This project is licensed under the MIT License. For more information, see the [L
 
 **Mobile**
 
-![Mobile Screenshot](demopics/phone.png)
+![Mobile Screenshot](demopcis/phone.png =500x1000)
+
 
 
 
