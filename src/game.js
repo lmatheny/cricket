@@ -90,6 +90,14 @@ export default function Game() {
     facingMode: "user",
   };
 
+
+  const videoConstraints5 = {
+    width: { min: 600 },
+    height: { min: 800 },
+    facingMode: "user",
+  };
+
+
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImg(imageSrc);
@@ -244,7 +252,7 @@ export default function Game() {
         setPlayerOnePic(guy15);
       } else if (playerOnePic === guy15) {
         setPlayerOnePic(guy16);
-      }  else if (playerOnePic === guy16) {
+      } else if (playerOnePic === guy16) {
         setPlayerOnePic(guy17);
       } else if (playerOnePic === guy17) {
         setPlayerOnePic(guy18);
@@ -254,7 +262,7 @@ export default function Game() {
         setPlayerOnePic(guy20);
       } else if (playerOnePic === guy20) {
         setPlayerOnePic(guy1);
-      } 
+      }
 
 
     } else {
@@ -305,7 +313,7 @@ export default function Game() {
         setPlayerTwoPic(guy15);
       } else if (playerTwoPic === guy15) {
         setPlayerTwoPic(guy16);
-      }  else if (playerTwoPic === guy16) {
+      } else if (playerTwoPic === guy16) {
         setPlayerTwoPic(guy17);
       } else if (playerTwoPic === guy17) {
         setPlayerTwoPic(guy18);
@@ -316,8 +324,8 @@ export default function Game() {
       } else if (playerTwoPic === guy20) {
         setPlayerTwoPic(guy1);
       }
- 
- 
+
+
     } else {
       setIsHidden2(true);
     }
@@ -366,7 +374,7 @@ export default function Game() {
         setPlayerThreePic(guy15);
       } else if (playerThreePic === guy15) {
         setPlayerThreePic(guy16);
-      }  else if (playerThreePic === guy16) {
+      } else if (playerThreePic === guy16) {
         setPlayerThreePic(guy17);
       } else if (playerThreePic === guy17) {
         setPlayerThreePic(guy18);
@@ -377,8 +385,8 @@ export default function Game() {
       } else if (playerThreePic === guy20) {
         setPlayerThreePic(guy1);
       }
- 
- 
+
+
     } else {
       setIsHidden3(true);
     }
@@ -428,7 +436,7 @@ export default function Game() {
         setPlayerFourPic(guy15);
       } else if (playerFourPic === guy15) {
         setPlayerFourPic(guy16);
-      }  else if (playerFourPic === guy16) {
+      } else if (playerFourPic === guy16) {
         setPlayerFourPic(guy17);
       } else if (playerFourPic === guy17) {
         setPlayerFourPic(guy18);
@@ -439,8 +447,8 @@ export default function Game() {
       } else if (playerFourPic === guy20) {
         setPlayerFourPic(guy1);
       }
- 
- 
+
+
     } else {
       setIsHidden4(true);
     }
@@ -1623,11 +1631,11 @@ export default function Game() {
   };
 
 
-  
-  if(isMobile) {
+
+  if (isMobile) {
     return (
 
-      <div style={{marginTop:"3%"}} className="gameMobile">
+      <div style={{ marginTop: "3%" }} className="gameMobile">
 
 
         <Box>
@@ -1665,36 +1673,36 @@ export default function Game() {
               <Box sx={{ height: (windowHeight / 10) * 7 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerOneUp} borderRadius="6%"><Grid container>
                 <Grid item xs={6}>
                   <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
-                    {isHidden ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerOnePic} class="guy"></img> : (
+                    {isHidden ? <img style={{ width: ((windowWidth / 6.5) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerOnePic} class="guy"></img> : (
 
                       <div >
                         {img === null ? (
-                          <div style={{ marginTop: "5%",  }}>
+                          <div style={{ marginTop: "5%", }}>
                             <Webcam
                               audio={false}
                               mirrored={false}
-                              facingMode= "user"
-                              videoConstraints={videoConstraints} 
+                              facingMode="user"
+                              videoConstraints={videoConstraints}
                               width={((windowWidth / 100) * 15)}
-                              
+
                               ref={webcamRef}
                               screenshotFormat="image/jpeg"
-                             
+
                             />
 
-                            <Button  variant="contained" color="success" style={{marginBottom: ((windowHeight / 100) * 3) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture}>Take photo</Button>
+                            <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 7.5) + 'px') }} src={img} alt="screenshot" />
-                            <Button  variant="contained" color="error" style={{marginBottom: ((windowHeight / 100) * 1) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img} alt="screenshot" />
+                            <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg(null)}>Retake</Button>
 
                           </>
                         )}
 
                       </div>
                     )}
-                    
+
                   </Box>
                 </Grid>
                 <Grid item xs={6} >
@@ -1703,74 +1711,74 @@ export default function Game() {
                   </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
                       {playerOneMPR}
                     </p>
-                    
-                    
-                    </Box>
-                    
+
+
+                  </Box>
+
                 </Grid>
-               
+
               </Grid>
-              <Box style={{marginTop:  (windowHeight / 60) + '%'}} item xs={12}><div>
-                  <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px') ,width: ((windowWidth / 100) * 8.5) + 'px'}} align='center' src={rotatePic} onClick={changeplayer1Icon} class="rotButton"></img> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px'),  width: ((windowWidth / 100) * 8.5) + 'px'}} align='center'  src={cameraPic} onClick={toggleImageVisibility} class="rotButton"></img></div>
-                  </div></Box>
+                <Box style={{ marginTop: (windowHeight / 60) + '%' }} item xs={12}><div>
+                  <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer1Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility} class="rotButton"></img></div>
+                </div></Box>
               </Box>
 
-              <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerTwoUp} borderRadius="6%"><Grid container>
-               <Grid item xs={6}>
-                 <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
-                   {isHidden2 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerTwoPic} class="guy"></img> : (
+                <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerTwoUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden2 ? <img style={{ width: ((windowWidth / 6.5) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerTwoPic} class="guy"></img> : (
 
 
-                     <div >
-                       {img2 === null ? (
-                         <div style={{ marginTop: "5%",  }}>
-                           <Webcam
-                             audio={false}
-                             mirrored={false}
-                             facingMode= "user"
-                           
-                              
-                             width={((windowWidth / 100) * 15)}
-                             ref={webcamRef2}
-                             screenshotFormat="image/jpeg"
-                             videoConstraints={videoConstraints2}
-                           />
+                        <div >
+                          {img2 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                mirrored={false}
+                                facingMode="user"
 
 
-                           <Button  variant="contained" color="success" style={{marginBottom: ((windowHeight / 100) * 3) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture2}>Take photo</Button>
-                         </div>
-                       ) : (
-                         <>
-                           <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 7.5) + 'px') }} src={img2} alt="screenshot" />
-                           <Button  variant="contained" color="error" style={{marginBottom: ((windowHeight / 100) * 1) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg2(null)}>Retake</Button>
+                                width={((windowWidth / 100) * 15)}
+                                ref={webcamRef2}
+                                screenshotFormat="image/jpeg"
+                                videoConstraints={videoConstraints2}
+                              />
 
 
-                         </>
-                       )}
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture2}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img2} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg2(null)}>Retake</Button>
 
 
-                     </div>
-                   )}
-                  
-                 </Box>
-               </Grid>
-               <Grid item xs={6} >
-                 <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                   MPR
-                 </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                     {playerTwoMPR}
-                   </p>
-                  
-                  
-                   </Box>
-                  
-               </Grid>
-             
-             </Grid>
-             <Box style={{marginTop:  (windowHeight / 60) + '%'}} item xs={12}><div>
-                 <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px') ,width: ((windowWidth / 100) * 8.5) + 'px'}} align='center' src={rotatePic} onClick={changeplayer2Icon} class="rotButton"></img> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px'),  width: ((windowWidth / 100) * 8.5) + 'px'}} align='center'  src={cameraPic} onClick={toggleImageVisibility2} class="rotButton"></img></div>
-                 </div></Box>
-             </Box></Box>
+                            </>
+                          )}
+
+
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerTwoMPR}
+                      </p>
+
+
+                    </Box>
+
+                  </Grid>
+
+                </Grid>
+                  <Box style={{ marginTop: (windowHeight / 60) + '%' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer2Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility2} class="rotButton"></img></div>
+                  </div></Box>
+                </Box></Box>
             </Grid>
             <Grid item xs={4}>
               <Box sx={{ height: (windowHeight / 10) * 6.5 }} > <Box sx={{ height: (windowHeight / 10) * 1 }}> <img class="barImageMobile" src={bar} style={{ marginTop: ((windowHeight / 150) + 'px'), height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 30) + 'px') }}></img><div class="container">
@@ -1806,135 +1814,135 @@ export default function Game() {
                 </div></Box>
                 <Box sx={{ height: (windowHeight / 10) * 1 }}> <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
                   <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <img src={bull} class="bullLogo" style={{marginTop: ((windowHeight / 1500) + '%'), height: ((windowHeight / 10 * .625) + 'px'), width: ((windowHeight / 10 * .55) + 'px') }}></img>
+                  <img src={bull} class="bullLogo" style={{ marginTop: ((windowHeight / 1500) + '%'), height: ((windowHeight / 10 * .625) + 'px'), width: ((windowHeight / 10 * .55) + 'px') }}></img>
                   <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
               </Box>
             </Grid>
             <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> 
-              
-              
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}>
 
 
-              <Box sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
-               <Grid item xs={6}>
-                 <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
-                   {isHidden3 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerThreePic} class="guy"></img> : (
 
 
-                     <div >
-                       {img3 === null ? (
-                         <div style={{ marginTop: "5%",  }}>
-                           <Webcam
-                             audio={false}
-                             mirrored={false}
-                             facingMode= "user"
-                            
-                             ref={webcamRef3}
-                             screenshotFormat="image/jpeg"
-                             videoConstraints={videoConstraints} 
-                             width={((windowWidth / 100) * 15)}
-                           />
+                <Box sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden3 ? <img style={{ width: ((windowWidth / 6.5) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerThreePic} class="guy"></img> : (
 
 
-                           <Button  variant="contained" color="success" style={{marginBottom: ((windowHeight / 100) * 3) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture3}>Take photo</Button>
-                         </div>
-                       ) : (
-                         <>
-                           <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 7.5) + 'px') }} src={img3} alt="screenshot" />
-                           <Button  variant="contained" color="error" style={{marginBottom: ((windowHeight / 100) * 1) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg3(null)}>Retake</Button>
+                        <div >
+                          {img3 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                mirrored={false}
+                                facingMode="user"
+
+                                ref={webcamRef3}
+                                screenshotFormat="image/jpeg"
+                                videoConstraints={videoConstraints}
+                                width={((windowWidth / 100) * 15)}
+                              />
 
 
-                         </>
-                       )}
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture3}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img3} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg3(null)}>Retake</Button>
 
 
-                     </div>
-                   )}
-                  
-                 </Box>
-               </Grid>
-               <Grid item xs={6} >
-                 <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                   MPR
-                 </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                     {playerThreeMPR}
-                   </p>
-                  
-                  
-                   </Box>
-                  
-               </Grid>
-             
-             </Grid>
-             <Box style={{marginTop:  (windowHeight / 60) + '%'}} item xs={12}><div>
-                 <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px') ,width: ((windowWidth / 100) * 8.5) + 'px'}} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px'),  width: ((windowWidth / 100) * 8.5) + 'px'}} align='center'  src={cameraPic} onClick={toggleImageVisibility3} class="rotButton"></img></div>
-                 </div></Box>
-             </Box>
-              
-              
-              
-               <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerFourUp} borderRadius="6%"><Grid container>
-               <Grid item xs={6}>
-                 <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
-                   {isHidden4 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerFourPic} class="guy"></img> : (
+                            </>
+                          )}
 
 
-                     <div >
-                       {img4 === null ? (
-                         <div style={{ marginTop: "5%",  }}>
-                           <Webcam
-                             audio={false}
-                             mirrored={false}
-                             facingMode= "user"
-                            
-                             ref={webcamRef4}
-                             screenshotFormat="image/jpeg"
-                             videoConstraints={videoConstraints} 
-                             width={((windowWidth / 100) * 15)}
-                           />
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerThreeMPR}
+                      </p>
 
 
-                           <Button  variant="contained" color="success" style={{marginBottom: ((windowHeight / 100) * 3) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture4}>Take photo</Button>
-                         </div>
-                       ) : (
-                         <>
-                           <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 7.5) + 'px') }} src={img4} alt="screenshot" />
-                           <Button  variant="contained" color="error" style={{marginBottom: ((windowHeight / 100) * 1) + '%', marginTop:  ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg4(null)}>Retake</Button>
+                    </Box>
+
+                  </Grid>
+
+                </Grid>
+                  <Box style={{ marginTop: (windowHeight / 60) + '%' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility3} class="rotButton"></img></div>
+                  </div></Box>
+                </Box>
 
 
-                         </>
-                       )}
+
+                <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerFourUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden4 ? <img style={{ width: ((windowWidth / 6.5) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerFourPic} class="guy"></img> : (
 
 
-                     </div>
-                   )}
-                  
-                 </Box>
-               </Grid>
-               <Grid item xs={6} >
-                 <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                   MPR
-                 </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                     {playerFourMPR}
-                   </p>
-                  
-                  
-                   </Box>
-                  
-               </Grid>
-             
-             </Grid>
-             <Box style={{marginTop:  (windowHeight / 60) + '%'}} item xs={12}><div>
-                 <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px') ,width: ((windowWidth / 100) * 8.5) + 'px'}} align='center' src={rotatePic} onClick={changeplayer4Icon} class="rotButton"></img> <img style={{maxHeight: (((windowHeight / 100) * 7) + 'px'),  width: ((windowWidth / 100) * 8.5) + 'px'}} align='center'  src={cameraPic} onClick={toggleImageVisibility4} class="rotButton"></img></div>
-                 </div></Box>
-             </Box>
-</Box>
+                        <div >
+                          {img4 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                mirrored={false}
+                                facingMode="user"
+
+                                ref={webcamRef4}
+                                screenshotFormat="image/jpeg"
+                                videoConstraints={videoConstraints}
+                                width={((windowWidth / 100) * 15)}
+                              />
+
+
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={capture4}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 6.25) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img4} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + 'px'), width: "190%" }} onClick={() => setImg4(null)}>Retake</Button>
+
+
+                            </>
+                          )}
+
+
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerFourMPR}
+                      </p>
+
+
+                    </Box>
+
+                  </Grid>
+
+                </Grid>
+                  <Box style={{ marginTop: (windowHeight / 60) + '%' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 11) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer4Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 7) + 'px'), width: ((windowWidth / 100) * 8.5) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility4} class="rotButton"></img></div>
+                  </div></Box>
+                </Box>
+              </Box>
             </Grid>
             <Grid item xs={12}>
 
-              <Box sx={{marginTop: (windowHeight / 100) * .5 + "px" , height: (windowHeight / 10) * .5 }}>
+              <Box sx={{ marginTop: (windowHeight / 100) * .5 + "px", height: (windowHeight / 10) * .5 }}>
 
                 <Grid container spacing={1}>
                   <Grid item xs={4}>
@@ -2038,224 +2046,306 @@ export default function Game() {
               <Box sx={{ width: '100%', height: (windowHeight / 10) * 1.25 }}><h1 class="pointsText" style={{ fontSize: ((windowHeight / 20) + 'px') }}>Points</h1><h2 class="pointsNumber" style={{ fontSize: ((windowHeight / 20) + 'px') }}>{pointsTeamTwo} </h2></Box>
             </Grid>
             <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerOneUp} borderRadius="6%"><Grid container>
+              <Box sx={{ height: (windowHeight / 10) * 7 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerOneUp} borderRadius="6%"><Grid container>
                 <Grid item xs={6}>
-                  <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 3 }} >
-                    {isHidden ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerOnePic} class="guy"></img> : (
+                  <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                    {isHidden ? <img style={{ width: ((windowWidth / 10) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerOnePic} class="guy"></img> : (
 
-                      <div>
+                      <div >
                         {img === null ? (
-                          <div style={{ marginTop: "5%" }}>
+                          <div style={{ marginTop: "5%", }}>
                             <Webcam
                               audio={false}
-                              mirrored={false}
-                              facingMode= "user"
-                              height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 6.25) + 'px')}
+                              facingMode="user"
+
+
+                              width={((windowWidth / 100) * 15)}
+
+
+                              videoConstraints={videoConstraints2}
+
+
                               ref={webcamRef}
                               screenshotFormat="image/jpeg"
-                              videoConstraints={videoConstraints}
+
                             />
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture}>Take photo</Button>
+                            <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 5) + '%'), width: "190%" }} onClick={capture}>Take photo</Button>
                           </div>
                         ) : (
                           <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg(null)}>Retake</Button>
+                            <img style={{ marginTop: "5%", height: ((windowHeight / 7) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img} alt="screenshot" />
+                            <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + '%'), width: "190%" }} onClick={() => setImg(null)}>Retake</Button>
 
                           </>
                         )}
 
                       </div>
                     )}
-                    <div align='center' style={{ display: 'flex', height: (windowHeight / 10) + '%' }}> <img style={{ marginTop: ((windowHeight / 250) + '%') }} align='center' src={rotatePic} onClick={changeplayer1Icon} class="rotButton"></img> <img style={{ marginTop: ((windowHeight / 250) + '%') }} align='center' src={cameraPic} onClick={toggleImageVisibility} class="rotButton"></img></div></Box>
+
+                  </Box>
                 </Grid>
                 <Grid item xs={6} >
-                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 22000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
                     MPR
-                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
+                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 28000) + 'px'), color: 'white', textAlign: 'center' }}>
                       {playerOneMPR}
-                    </p></Box>
+                    </p>
+
+
+                  </Box>
+
                 </Grid>
+
               </Grid>
-              </Box> <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerTwoUp} borderRadius="6%"><Grid container>
-                <Grid item xs={6}>
-                  <Box sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 3 }} >
-                    {isHidden2 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerTwoPic} class="guy"></img> : (
+                <Box style={{ marginTop: (windowHeight / 22.5) + 'px' }} item xs={12}><div>
+                  <div align='center' style={{ display: 'flex', height: (windowHeight / 12) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer1Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility} class="rotButton"></img></div>
+                </div></Box>
+              </Box>
 
-                      <div>
-                        {img2 === null ? (
-                          <div style={{ marginTop: "5%" }}>
-                            <Webcam
-                              audio={false}
-                              mirrored={false}
-                              facingMode= "user"
-                              height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 6.25) + 'px')}
-                              ref={webcamRef2}
-                              screenshotFormat="image/jpeg"
-                              videoConstraints={videoConstraints2}
-                            />
+                <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerTwoUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden2 ? <img style={{ width: ((windowWidth / 10) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerTwoPic} class="guy"></img> : (
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture2}>Take photo</Button>
-                          </div>
-                        ) : (
-                          <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img2} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg2(null)}>Retake</Button>
 
-                          </>
-                        )}
+                        <div >
+                          {img2 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                facingMode="user"
 
-                      </div>
-                    )}
 
-                    <div align='center' style={{ display: 'flex', height: (windowHeight / 10) + '%' }}> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={rotatePic} onClick={changeplayer2Icon} class="rotButton"></img> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={cameraPic} onClick={toggleImageVisibility2} class="rotButton"></img></div></Box>
+                                width={((windowWidth / 100) * 15)}
+
+
+                                videoConstraints={videoConstraints2}
+
+
+
+
+                                ref={webcamRef2}
+                                screenshotFormat="image/jpeg"
+
+                              />
+
+
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 5) + '%'), width: "190%" }} onClick={capture2}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 7) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img2} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + '%'), width: "190%" }} onClick={() => setImg2(null)}>Retake</Button>
+
+
+                            </>
+                          )}
+
+
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 22000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 28000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerTwoMPR}
+                      </p>
+
+
+                    </Box>
+
+                  </Grid>
+
                 </Grid>
-                <Grid item xs={6} >
-                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                    MPR
-                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                      {playerTwoMPR}
-                    </p></Box>
-                </Grid>
-              </Grid>
+                  <Box style={{ marginTop: (windowHeight / 22.5) + 'px' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 12) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer2Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility2} class="rotButton"></img></div>
+                  </div></Box>
                 </Box></Box>
             </Grid>
             <Grid item xs={4}>
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }} > <Box sx={{ height: (windowHeight / 10) * .85 }}> <img class="barImageWeb" src={bar} style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 30) + 'px') }}></img><div class="container">
-                <img src={imageOne20} class="scoreLogo" onClick={changeImageTeamOne20} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }} ></img>
-                <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >20</p>
-                <img src={imageTwo20} class="scoreLogo" onClick={changeImageTeamTwo20} style={{ marginTop: '2%', marginBottom: '2%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }} > <Box sx={{ height: (windowHeight / 10) * 1 }}> <img class="barImageMobile" src={bar} style={{ marginTop: ((windowHeight / 150) + 'px'), height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 30) + 'px') }}></img><div class="container">
+                <img src={imageOne20} class="scoreLogo" onClick={changeImageTeamOne20} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }} ></img>
+                <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >20</p>
+                <img src={imageTwo20} class="scoreLogo" onClick={changeImageTeamTwo20} style={{ marginTop: '2%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
               </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}><img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}><img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img>
                   <div class="container">
-                    <img src={imageOne19} class="scoreLogo" onClick={changeImageTeamOne19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                    <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >19</p>
-                    <img src={imageTwo19} class="scoreLogo" onClick={changeImageTeamTwo19} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                    <img src={imageOne19} class="scoreLogo" onClick={changeImageTeamOne19} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                    <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >19</p>
+                    <img src={imageTwo19} class="scoreLogo" onClick={changeImageTeamTwo19} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                   </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
-                  <img src={imageOne18} class="scoreLogo" onClick={changeImageTeamOne18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >18</p>
-                  <img src={imageTwo18} class="scoreLogo" onClick={changeImageTeamTwo18} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}>  <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne18} class="scoreLogo" onClick={changeImageTeamOne18} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >18</p>
+                  <img src={imageTwo18} class="scoreLogo" onClick={changeImageTeamTwo18} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
-                  <img src={imageOne17} class="scoreLogo" onClick={changeImageTeamOne17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >17</p>
-                  <img src={imageTwo17} class="scoreLogo" onClick={changeImageTeamTwo17} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}>  <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne17} class="scoreLogo" onClick={changeImageTeamOne17} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >17</p>
+                  <img src={imageTwo17} class="scoreLogo" onClick={changeImageTeamTwo17} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
-                  <img src={imageOne16} class="scoreLogo" onClick={changeImageTeamOne16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >16</p>
-                  <img src={imageTwo16} class="scoreLogo" onClick={changeImageTeamTwo16} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}>  <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne16} class="scoreLogo" onClick={changeImageTeamOne16} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >16</p>
+                  <img src={imageTwo16} class="scoreLogo" onClick={changeImageTeamTwo16} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}>  <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
-                  <img src={imageOne15} class="scoreLogo" onClick={changeImageTeamOne15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 190) + '%'), fontSize: ((windowHeight / 20) + 'px') }} >15</p>
-                  <img src={imageTwo15} class="scoreLogo" onClick={changeImageTeamTwo15} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}>  <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne15} class="scoreLogo" onClick={changeImageTeamOne15} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                  <p class="numberBarText" style={{ marginTop: ((windowHeight / 200) + '%'), fontSize: ((windowHeight / 22.5) + 'px') }} >15</p>
+                  <img src={imageTwo15} class="scoreLogo" onClick={changeImageTeamTwo15} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
-                <Box sx={{ height: (windowHeight / 10) * .85 }}> <img src={bar} class="barImageWeb" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
-                  <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
-                  <img src={bull} class="bullLogo" style={{ height: ((windowHeight / 10 * 1) + 'px') }}></img>
-                  <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '1%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                <Box sx={{ height: (windowHeight / 10) * 1 }}> <img src={bar} class="barImageMobile" style={{ height: ((windowHeight / 90) + 'px'), maxHeight: ((windowHeight / 20) + 'px') }}></img><div class="container">
+                  <img src={imageOne25} class="scoreLogo" onClick={changeImageTeamOne25} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
+                  <img src={bull} class="bullLogo" style={{ marginTop: ((windowHeight / 1500) + '%'), height: ((windowHeight / 10 * .625) + 'px'), width: ((windowHeight / 10 * .55) + 'px') }}></img>
+                  <img src={imageTwo25} class="scoreLogo" onClick={changeImageTeamTwo25} style={{ marginTop: '1%', marginBottom: '4%', maxHeight: ((windowHeight / 16) + 'px'), maxWidth: ((windowWidth / 20 + 'px')) }}></img>
                 </div></Box>
               </Box>
             </Grid>
             <Grid item xs={4} border={0} borderColor="blue" spacing={2} >
-              <Box sx={{ height: (windowHeight / 10) * 6.5 }}> <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
-                <Grid item xs={6}>
-                  <Box sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 3 }} >
-                    {isHidden3 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerThreePic} class="guy"></img> : (
+              <Box sx={{ height: (windowHeight / 10) * 6.5 }}>
 
-                      <div>
-                        {img3 === null ? (
-                          <div style={{ marginTop: "5%" }}>
-                            <Webcam
-                              audio={false}
-                              mirrored={false}
-                              facingMode= "user"
-                              height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 6.25) + 'px')}
-                              ref={webcamRef3}
-                              screenshotFormat="image/jpeg"
-                              videoConstraints={videoConstraints3}
-                            />
 
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture3}>Take photo</Button>
-                          </div>
-                        ) : (
-                          <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img3} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 25) + 'px'), width: "100%" }} onClick={() => setImg3(null)}>Retake</Button>
 
-                          </>
-                        )}
 
-                      </div>
-                    )}
-                    <div align='center' style={{ display: 'flex', height: (windowHeight / 10) + '%' }}> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={cameraPic} onClick={toggleImageVisibility3} class="rotButton"></img></div></Box>
+                <Box sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerThreeUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden ? <img style={{ width: ((windowWidth / 10) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerThreePic} class="guy"></img> : (
+
+
+                        <div >
+                          {img3 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                facingMode="user"
+
+
+                                width={((windowWidth / 100) * 15)}
+
+
+                                videoConstraints={videoConstraints2}
+
+
+
+
+                                ref={webcamRef3}
+                                screenshotFormat="image/jpeg"
+
+                              />
+
+
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 5) + '%'), width: "190%" }} onClick={capture3}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 7) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img3} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + '%'), width: "190%" }} onClick={() => setImg3(null)}>Retake</Button>
+
+
+                            </>
+                          )}
+
+
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 22000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 28000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerThreeMPR}
+                      </p>
+
+
+                    </Box>
+
+                  </Grid>
+
                 </Grid>
-                <Grid item xs={6} >
-                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                    MPR
-                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                      {playerThreeMPR}
-                    </p></Box>
+                  <Box style={{ marginTop: (windowHeight / 22.5) + 'px' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 12) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer3Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility3} class="rotButton"></img></div>
+                  </div></Box>
+                </Box>
+
+
+
+
+
+
+                <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3.3 }} border={6} borderColor={playerFourUp} borderRadius="6%"><Grid container>
+                  <Grid item xs={6}>
+                    <Box style={{}} sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 2 }} >
+                      {isHidden4 ? <img style={{ width: ((windowWidth / 10) + 'px'), marginTop: ((windowHeight / 100) + '%') }} src={playerFourPic} class="guy"></img> : (
+
+
+                        <div >
+                          {img4 === null ? (
+                            <div style={{ marginTop: "5%", }}>
+                              <Webcam
+                                audio={false}
+                                facingMode="user"
+
+
+                                width={((windowWidth / 100) * 15)}
+
+
+                                videoConstraints={videoConstraints2}
+
+
+
+
+                                ref={webcamRef4}
+                                screenshotFormat="image/jpeg"
+
+                              />
+
+
+                              <Button variant="contained" color="success" style={{ marginBottom: ((windowHeight / 100) * 3) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 5) + '%'), width: "190%" }} onClick={capture4}>Take photo</Button>
+                            </div>
+                          ) : (
+                            <>
+                              <img style={{ marginTop: "5%", height: ((windowHeight / 7) + 'px'), width: ((windowWidth / 6.5) + 'px') }} src={img4} alt="screenshot" />
+                              <Button variant="contained" color="error" style={{ marginBottom: ((windowHeight / 100) * 1) + '%', marginTop: ((windowHeight / 100) * 1) + '%', height: ((windowHeight / 20) + '%'), width: "190%" }} onClick={() => setImg4(null)}>Retake</Button>
+
+
+                            </>
+                          )}
+
+
+                        </div>
+                      )}
+
+                    </Box>
+                  </Grid>
+                  <Grid item xs={6} >
+                    <Box sx={{ width: '100%', height: (windowHeight / 10) * 1 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 22000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
+                      MPR
+                    </p><p style={{ fontSize: (((windowWidth * windowHeight) / 28000) + 'px'), color: 'white', textAlign: 'center' }}>
+                        {playerFourMPR}
+                      </p>
+
+
+                    </Box>
+
+                  </Grid>
+
                 </Grid>
-              </Grid>
-              </Box> <Box hidden={playerThreeAndFourVisible} sx={{ width: '100%', height: (windowHeight / 10) * 3 }} border={6} borderColor={playerFourUp} borderRadius="6%"><Grid container>
-                <Grid item xs={6}>
-                  <Box sx={{ width: '100%', marginLeft: "5%", height: (windowHeight / 10) * 3 }} >
-                    {isHidden4 ? <img style={{ marginTop: ((windowHeight / 100) + '%') }} src={playerFourPic} class="guy"></img> : (
-
-
-                      <div>
-                        {img4 === null ? (
-                          <div style={{ marginTop: "5%" }}>
-                            <Webcam
-                              audio={false}
-                              mirrored={false}
-                              facingMode= "user"
-                              height={((windowHeight / 6) + 'px')}
-                              width={((windowWidth / 3) + 'px')}
-                              ref={webcamRef4}
-                              screenshotFormat="image/jpeg"
-                              videoConstraints={videoConstraints4}
-                            />
-
-
-                            <Button style={{ height: ((windowHeight / 30) + 'px'), width: "100%" }} onClick={capture4}>Take photo</Button>
-                          </div>
-                        ) : (
-                          <>
-                            <img style={{ marginTop: "5%", height: ((windowHeight / 6) + 'px'), width: ((windowWidth / 8.5) + 'px') }} src={img4} alt="screenshot" />
-                            <Button color="error" style={{ height: ((windowHeight / 45) + 'px'), width: "100%" }} onClick={() => setImg4(null)}>Retake</Button>
-
-
-                          </>
-                        )}
-
-
-                      </div>
-                    )}
-
-
-
-                    <div align='center' style={{ display: 'flex', height: (windowHeight / 10) + '%' }}> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={rotatePic} onClick={changeplayer4Icon} class="rotButton"></img> <img style={{ marginTop: ((windowHeight / 100) + '%') }} align='center' src={cameraPic} onClick={toggleImageVisibility4} class="rotButton"></img></div></Box>
-                </Grid>
-                <Grid item xs={6} >
-                  <Box sx={{ width: '100%', height: (windowHeight / 10) * 3 }}><p style={{ fontSize: (((windowWidth * windowHeight) / 20000) + 'px'), marginBottom: (('-' + (windowWidth * windowHeight) / 65000) + '%'), color: 'white', textAlign: 'center', marginTop: ((windowHeight / 50) + 'px') }}>
-                    MPR
-                  </p><p style={{ fontSize: (((windowWidth * windowHeight) / 23000) + 'px'), color: 'white', textAlign: 'center' }}>
-                      {playerFourMPR}
-                    </p></Box>
-                </Grid>
-              </Grid>
-                </Box></Box>
+                  <Box style={{ marginTop: (windowHeight / 22.5) + 'px' }} item xs={12}><div>
+                    <div align='center' style={{ display: 'flex', height: (windowHeight / 12) + '%' }}> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4.5) + 'px' }} align='center' src={rotatePic} onClick={changeplayer4Icon} class="rotButton"></img> <img style={{ maxHeight: (((windowHeight / 100) * 5) + 'px'), width: ((windowWidth / 100) * 4) + 'px' }} align='center' src={cameraPic} onClick={toggleImageVisibility4} class="rotButton"></img></div>
+                  </div></Box>
+                </Box>
+              </Box>
             </Grid>
             <Grid item xs={12}>
-              <Box sx={{ height: (windowHeight / 10) * .5 }}>
+
+              <Box sx={{ marginTop: (windowHeight / 100) * 1.5 + "px", height: (windowHeight / 10) * .5 }}>
 
                 <Grid container spacing={1}>
                   <Grid item xs={4}>
