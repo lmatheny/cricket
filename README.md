@@ -115,7 +115,7 @@ This project is licensed under the MIT License. For more information, see the [L
 **Mobile**
 
 <p align="left">
-  <img src="demopcis/phone.png" alt="Mobile Screenshot" width="500" height="800">
+  <img src="demopcis/phone.png" alt="Mobile Screenshot" width="600" height="900">
 </p>
 
 
