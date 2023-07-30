@@ -92,7 +92,7 @@ This project is licensed under the MIT License. For more information, see the [L
 
 ## Contact
 
-For any inquiries or feedback, please feel free to reach us at [email@example.com](mailto:lmatheny277@gmail.com).
+For any inquiries or feedback, please feel free to reach us at [email@example.com](mailto:lmatheny277@gmail.com)
 
 ---
 
