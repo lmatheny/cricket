@@ -100,15 +100,21 @@ This project is licensed under the MIT License. For more information, see the [L
 
 **Web**
 
-![Web Screenshot](assets/web.png)
+<p align="left">
+  <img src="demopcis/web.png" alt="Web Screenshot" width="800" height="400">
+</p>
+
 
 **Tablet**
 
-![Tablet Screenshot](assets/tablet.png)
+<p align="left">
+  <img src="demopcis/tablet.png" alt="Tablet Screenshot" width="600" height="800">
+</p>
+
 
 **Mobile**
 
-<p align="center">
+<p align="left">
   <img src="demopcis/phone.png" alt="Mobile Screenshot" width="500" height="1000">
 </p>
 
