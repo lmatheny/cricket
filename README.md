@@ -72,10 +72,6 @@ We welcome contributions to this project. If you would like to contribute, pleas
 
 5. Submit a pull request to the original repository with a detailed explanation of your changes.
 
-### License
-
-This project is licensed under the MIT License. For more information, see the [LICENSE](LICENSE) file.
-
 ## Game Screenshots
 
 **Web**
