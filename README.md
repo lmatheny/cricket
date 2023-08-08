@@ -1,5 +1,3 @@
-Certainly! Here's the updated README with the additional sections about detecting mobile and web devices, as well as the feature of detecting the end of a game and prompting users to start over:
-
 # Dartboard Cricket Scoreboard
 
 The Dartboard Cricket Scoreboard is a web application that provides a digital scoreboard to keep track of Cricket games. It offers the following features:
