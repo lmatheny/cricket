@@ -1,6 +1,6 @@
 # Dartboard Cricket Scoreboard
 
-The Dartboard Cricket Scoreboard is a web application that provides a digital scoreboard to keep track of Cricket games. It offers the following features:
+The Dartboard Cricket Scoreboard is a web application that provides a digital scoreboard to keep track of Cricket games.I developed this application because the dartboard at my apartment did not have an electric scoreboard and there wasn’t an existing online scoreboard that tracked MPR. I also recently purchased a tablet that rests on the wall next to my dartboard that has this web app pulled up at all times. The intuitive UI and funny avatar options have led to some good times with my friends. It offers the following features:
 
 ## Features
 
